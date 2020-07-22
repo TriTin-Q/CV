@@ -5,16 +5,27 @@
     <meta charset="utf-8" />
     <title>Accueil || CV</title>
 </head>
-
 <body>
     <style>
         #PremierBloc {
-            height: 1000px;
+            height: 720px;
             width: 100%;
-            background-color:black;
+            background-color: #eb4034;
+            z-index: -1;
+        }
+        #SecondBloc {
+            height: 720px;
+            width: 100%;
+            background-color: #3bc6d9;
+            z-index: -1;
+        }
+        #TroisièmeBloc {
+            z-index: 2;
         }
     </style>
-    <svg />
+    <div id="TroisièmeBloc">
+        test
+    </div>
     <div style="z-index : 0;" id="PremierBloc">
 
     </div>
