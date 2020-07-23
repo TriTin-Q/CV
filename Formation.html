@@ -42,7 +42,8 @@
             margin-left: 10%;
             /*background-color: rgb(217,217,217);*/
             /*text-align:center;*/
-            background-color: #f0efeb;
+            /*background-color: #f0efeb;*/ 
+            background-color: white;
         }
 
         #Expériences {
@@ -56,7 +57,7 @@
             color: black;
             position: relative;
             left: 5%;
-            top: 0%;
+            top: 2%;
             /*transform: translate(-3%, -15%);*/
             opacity: 1;
             font-family: Calibri;
@@ -65,7 +66,6 @@
         #school-img {
             position: relative;
             left: -10px;
-            top: 20px;
         }
 
         #work-img {
@@ -87,7 +87,7 @@
 
         p {
             color: black;
-            font-family: Calibri;
+            font-family:Calibri;
         }
 
         #Plus-1 {
@@ -107,6 +107,13 @@
         #Plus-text {
             background-color: #f0efeb;
         }
+        #navbarSupportedContent{
+            background-color:white;
+        }
+        #navbar{
+
+            background-color:white;
+        }
     </style>
     <script language="javascript">
         var actif = setInterval("opac()", 1000);
@@ -122,19 +129,25 @@
 
     <div>
         <div style="z-index : 0;" id="BaseBloc">
-            <div class="dropdown">
-                <button class="btn btn-outline-dark" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="img/list.png" />
+            <nav class="navbar navbar-expand-lg navbar-light " id="navbar">
+                <a class="navbar-brand" href="#">Formation</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <a href="Sommaire.html"><button class="dropdown-item" type="button">Sommaire</button></a>
-                    <div class="dropdown-divider"></div>
-                    <button class="dropdown-item disabled" type="button">Formation</button>
-                    <a href="Expérience.html"><button class="dropdown-item" type="button">Expérience</button></a>
-                    <a href="#"><button class="dropdown-item" type="button">Compétence/Projet</button></a>
+
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link  list-group-item-action" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+
+                    </ul>
 
                 </div>
-            </div>
+            </nav>
             <div id="Formation">
                 <h1><img src="img/study.png" id="school-img" /> Mes Formations </h1>
                 <p id="Formation-text">
