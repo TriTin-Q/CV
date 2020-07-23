@@ -7,31 +7,121 @@
 </head>
 <body>
     <style>
-        #PremierBloc {
+        body{
+            background-color:rgb(191,177,173);
+        }
+        div {
             height: 720px;
             width: 100%;
-            background-color: #eb4034;
+            /*background-color: #eb4034;*/
+            background-color: rgb(191,177,173);
             z-index: -1;
         }
-        #SecondBloc {
-            height: 720px;
-            width: 100%;
-            background-color: #3bc6d9;
-            z-index: -1;
-        }
-        #TroisièmeBloc {
+
+        svg {
             z-index: 2;
         }
+
+        #BaseBloc {
+            height: 720px;
+            width: 100%;
+            background-color: white;
+            border-bottom: initial;
+            border-bottom-color: black;
+            border-bottom-width: medium;
+            border z-index: -1;
+            background-color: rgb(191,177,173);
+        }
+
+        #Formation {
+            height: 650px;
+            width: 80%;
+            margin-left: 10%;
+            /*background-color: rgb(217,217,217);*/
+            background-color: #f0efeb;
+        }
+
+        #Expériences {
+            height: 650px;
+            width: 80%;
+            margin-left: 10%;
+            background-color: black;
+        }
+
+        #Formation h1 {
+            color: black;
+            position: absolute;
+            left: 15%;
+            top: 0%;
+            transform: translate(-3%, -15%);
+            opacity: 1;
+            font-family: Calibri;
+        }
+
+        #school-img {
+            position: relative;
+            left: -10px;
+            top: 20px;
+        }
+
+        #work-img {
+            position: relative;
+            width:35%;
+            height: 45%;
+            left: 65%;
+            top: 55%;
+        }
+
+        #Formation-text {
+            color: black;
+            font-size: 24px;
+            position: relative;
+            position: absolute;
+            left: 40%;
+            top: 30%;
+            transform: translate(-45%, -35%);
+            font-family:Calibri;
+        }
+        p {
+            color: black;
+            font-family: Calibri;
+        }
     </style>
-    <div id="TroisièmeBloc">
-        test
+    <script language="javascript">
+        var actif = setInterval("opac()",1000);
+        var i = 0;
+        function opac() {
+           if(i >= 1 ){
+              window.clearInterval(actif);
+            }
+            document.getElementById('h1').style.opacity = 1 + i;
+           i = i + 0.1;   
+        }
+    </script>
+    <div style="z-index : 0;" id="BaseBloc">
+        <div id="Formation">
+            <h1><img src="img/study.png" id="school-img" /> Mes Formations </h1>
+            <p id="Formation-text">
+                <b>2i Tech Academy : 2020 - 2022</b>
+                <br /><br />
+                      <i>- Formation 24 mois : Développeur Concepteur d'Application.</i>
+                <br /><br />
+                <b>Université Lyon1 Claude Bernard : 2016 - 2020</b>
+                <br /><br />
+                      <i>- Licence : Informatique</i>
+                <br /><br />
+                <b>Lycée Charlie Chaplin : 2015 - 2016</b>
+                <br /><br />
+                      <i> - Baccalauréat : Scientifique, option "Informatique science du numérique"</i>
+            </p>
+            <img src="img/work.png" id="work-img"/>
+        </div>
     </div>
-    <div style="z-index : 0;" id="PremierBloc">
 
-    </div>
-
-    <div style="z-index : 0;" id="SecondBloc">
-
+    <div style="z-index : 0;" id="BaseBloc">
+        <div id="Expériences">
+            <h1>Mes Expériences</h1>
+        </div>
     </div>
 </body>
 </html>
