@@ -18,43 +18,50 @@
             background-color: rgb(191,177,173);
             z-index: -1;
         }
+
         #Sommaire {
             width: 70%;
             margin-left: 50px;
             color: white;
-            margin-top:50px;
+            margin-top: 50px;
             text-shadow: 10px 10px 10px black;
         }
 
-       #Flower{
-           width:60%;
-           height:60%;
-           position:absolute;
-           left:500px;
-           top:200px;
-       }
-       img{
-           z-index:0;
-       }
-       div{
-           z-index:2;
-       }
+        #Clouds {
+            width:60%;
+            height: 60%;
+            /*position: absolute;
+            left: 0px;
+            top: 200px;*/
+            /*background-attachment:unset;*/
+            top : 200px;
+            position:fixed;
+        }
+
+        img {
+            z-index: 0;
+        }
+
+        div {
+            z-index: 2;
+        }
+
         .card {
             /*background-image: url(img/clouds.png);*/
-            background-color:transparent;
+            background-color: transparent;
             /*-webkit-filter: blur(5px);*/
         }
-        .card-body{
-            color:white;
-            text-shadow:20px 12px 12px black;
-            font-size:18px;
-            background-color : rgb(100,100,100,0.5)
+
+        .card-body {
+            color: white;
+            text-shadow: 20px 12px 12px black;
+            font-size: 18px;
+            background-color: rgb(100,100,100,0.5);
         }
     </style>
     <div id="Sommaire">
         <h1>Sommaire</h1>
 
-        <img src="img/clouds.png" id="Flower" />
         <br />
         <br />
         <br />
@@ -111,8 +118,21 @@
                     </div>
                 </div>
             </div>
+            <img src="img/clouds.png" id="Clouds" />
         </div>
 
     </div>
+
+    <script language="javascript">
+        var actif = setInterval("fly()", 50);
+        var i = 0;
+        function fly() {
+            if (i >= 1530) {
+                i = -910;
+            }
+            document.getElementById('Clouds').style.left = 1+ i + "px";
+            i = i + 1;
+        }
+    </script>
 </body>
 </html>

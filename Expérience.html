@@ -8,20 +8,18 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""></script>
 </head>
 <body>
     <style>
         body {
             background-color: rgb(191,177,173);
         }
-
-        div {
-            /*background-color: #eb4034;*/
-            background-color: rgb(191,177,173);
-            /*z-index: -1;*/
-        }
-
-
 
         #BaseBloc {
             height: 720px;
@@ -35,52 +33,33 @@
             /*text-align:center;*/
         }
 
+
         #Experience {
             margin-top: 30px;
             height: 650px;
-            width: 80%;
-            margin-left: 10%;
+            width: 90%;
+            margin-left: 5%;
             /*background-color: rgb(217,217,217);*/
             /*text-align:center;*/
-            background-color: #f0efeb;
-        }
-
-        #Experiences {
-            height: 650px;
-            width: 80%;
-            background-color: #f0efeb;
-            margin-left: 10%;
+            /*background-color: #f0efeb;*/
+            background-color: white;
         }
 
         #Experience h1 {
             color: black;
             position: relative;
-            left: 5%;
-            top: 0%;
+            left: 2%;
+            top: 2%;
             /*transform: translate(-3%, -15%);*/
             opacity: 1;
             font-family: Calibri;
-        }
-
-        #school-img {
-            position: relative;
-            left: -10px;
-            top: 20px;
-        }
-
-        #work-img {
-            position: absolute;
-            width: 25%;
-            height: 35%;
-            left: 65%;
-            top: 61.5%;
         }
 
         #Experience-text {
             color: black;
             font-size: 24px;
             position: relative;
-            left: 15%;
+            left: 8%;
             top: 3%;
             font-family: Calibri;
         }
@@ -90,23 +69,45 @@
             font-family: Calibri;
         }
 
+        #work-img {
+            position: absolute;
+            /*width: 25%;
+            height: 35%;*/
+            left: 50%;
+            top: 50%;
+        }
+
         #Plus-1 {
             /*margin-top: 200px;*/
-            width: 80%;
-            margin-left: 10%;
-            text-align: center;
-            margin-top: -60px;
+            width: 90%;
+            margin-left: 5%;
+            /*text-align: center;*/
+            margin-top: 20px;
         }
 
         #ButtonPlus-1 {
             position: absolute;
-            top: 85%;
+            top: 95%;
             left: 40%;
         }
 
         #Plus-text {
             background-color: #f0efeb;
         }
+        #navbarSupportedContent {
+            background-color: white;
+        }
+
+        #navbar {
+            background-color: white;
+        }
+        #mapid {
+            height: 400px;
+            width:600px;
+            
+            background-color:white;
+        }
+    </style>
     </style>
     <script language="javascript">
         var actif = setInterval("opac()", 1000);
@@ -122,38 +123,112 @@
 
     <div>
         <div style="z-index : 0;" id="BaseBloc">
-            <div class="dropdown">
-                <button class="btn btn-outline-dark" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="img/list.png" />
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <a href="Sommaire.html"><button class="dropdown-item" type="button">Sommaire</button></a>
-                    <div class="dropdown-divider"></div>
-                    <button class="dropdown-item disabled" type="button">Experience</button>
-                    <a href="#"><button class="dropdown-item" type="button">Experience</button></a>
-                    <a href="#"><button class="dropdown-item" type="button">Compétence/Projet</button></a>
-
+            <nav class="navbar navbar-expand-lg navbar-light " id="navbar">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="nav nav-tabs ">
+                        <li class="nav-item ">
+                            <a class="nav-link list-group-item-action" href="Sommaire.html">Menu <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link  list-group-item-action" href="Experience.html">Experience <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active list-group-item-action" href="Expérience.html">Expérience <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link  list-group-item-action" href="#">Projet <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+            </nav>
             <div id="Experience">
                 <h1><img src="img/study.png" id="school-img" /> Mes Experiences </h1>
                 <p id="Experience-text">
-
+                    <b>Devu : 2018-2019</b>
+                    <br /><br />
+                    <i>- Relever d'occupation de salle</i>
+                    <br /><br />
+                    <b>Plastibell : 2017</b>
+                    <br /><br />
+                    <i>- Conditionnement en usine</i>
                 </p>
-                <!--<img src="img/work.png" id="work-img" />-->
+                <img src="img/TeamWork.png" id="work-img" />
                 <p>
-                    <a class="btn-group-toggle btn btn-secondary active" id="ButtonPlus-1" data-toggle="collapse" href="#ExperienceText" role="button" aria-expanded="false" aria-controls="ExperienceText">
-                        En savoir plus
+                    <a class="btn-group-toggle btn btn-secondary active" id="ButtonPlus-1" data-toggle="collapse" href="#ExperienceText" role="button" aria-expanded="false" aria-controls="ExperienceText" onclick="plus();">
+                        Refermer
                     </a>
-
                 </p>
-
             </div>
         </div>
         <div id="Plus-1">
-            <div class="collapse" id="ExperienceText">
-                <div class="card card-body" id="Plus-text">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            <div class="collapse show" id="ExperienceText">
+                <div class="card card-body " id="Plus-text">
+                    <div>
+                        <ul class="list-group list-group-flush ">
+                            <li class="list-group-item">
+                                <b>2i Tech Academy</b> <a href="#mapid" onclick="Academy(); click();">Voir carte</a> <br /><u>Apprentissage à venir </u>
+                                <ul>
+                                    <li> Symfony</li>
+                                    <li> MongoDB(SQL)</li>
+                                    <li> Spring</li>
+                                </ul>
+                            </li>
+
+                            <li class="list-group-item">
+                                <b>Lycée Charlie Chaplin</b> <a href="#mapid" onclick="Lycee(); click();">Voir carte</a><br /> <u>Notions vues</u>
+                                <ul>
+                                    <li>Acquisition des bases de l'informatique</li>
+                                    <li>Cours de chinois (3 ans)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <center><div id="mapid"></div></center>
+                    <script>
+                        var mymap = L.map('mapid').setView([45.78, 4.906000704384237], 12.2);
+
+                        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                            maxZoom: 18,
+                            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                            id: 'mapbox/streets-v11',
+                            tileSize: 512,
+                            zoomOffset: -1
+                        }).addTo(mymap);
+                        var markerLycee = L.marker([45.7727019, 4.9754409]).addTo(mymap);
+                        markerLycee.bindPopup("<b>Lycée Charlie Chaplin</b><br> <u>Adresse </u> : 373 Avenue Jean Jaurès, 69150 Décines-Charpieu <br><u> Téléphone</u> : 04 72 05 63 90.");
+                        //markerLycee.openPopup();
+                        var markerUniversite = L.marker([45.7815502, 4.8681782]).addTo(mymap);
+                        markerUniversite.bindPopup("<b>Université Lyon1 Claude Bernard</b><br> <u>Adresse </u> : 43 Boulevard du 11 Novembre 1918, 69100 Villeurbanne <br><u> Téléphone</u> : 04 72 44 80 00.");
+                        var markerAlternance = L.marker([45.7452, 4.842]).addTo(mymap);
+                        markerAlternance.bindPopup("<b>2i Tech Academy</b><br> <u>Adresse </u> : Seven, Immeuble le, 69 Avenue Tony Garnier, 69007 Lyon <br><u> Téléphone</u> :  04 78 02 38 90.");
+
+                        var varAcademy = false;
+                        var varUniversite = false;
+                        var varLycee = false;
+
+                        function Academy() {
+                            varAcademy = true; varUniversite = false; varLycee = false; markerAlternance.openPopup()
+                        }
+                        function Universite() {
+                            varAcademy = false; varUniversite = true; varLycee = false; markerUniversite.openPopup();
+                        }
+                        function Lycee() {
+                            varAcademy = false; varUniversite = false; varLycee = true; markerLycee.openPopup();
+                        }
+
+                        var varPlus = true;
+                        function plus() {
+                            if (varPlus == true) {
+                                document.getElementById("ButtonPlus-1").innerHTML = 'En savoir plus'
+                                varPlus = false;
+                            } else {
+                                document.getElementById("ButtonPlus-1").innerHTML = 'Refermer'
+                                varPlus = true;
+                            }
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -161,10 +236,10 @@
 
 
         <!--<div style="z-index : 0;" id="BaseBloc">
-            <div id="Experiences">
-                <h1>Mes Experiences</h1>
-            </div>
-        <  /div>-->
+        <div id="Expériences">
+            <h1>Mes Expériences</h1>
+        </div>
+    <  /div>-->
     </div>
 </body>
 </html>
