@@ -88,7 +88,7 @@
         #ButtonPlus-1 {
             position: absolute;
             top: 95%;
-            left: 40%;
+            left: 45%;
         }
 
         #Plus-text {
@@ -130,25 +130,25 @@
                             <a class="nav-link list-group-item-action" href="Sommaire.html">Menu <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link  list-group-item-action" href="Experience.html">Experience <span class="sr-only">(current)</span></a>
+                            <a class="nav-link  list-group-item-action" href="Experience.html">Formation <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link active list-group-item-action" href="Expérience.html">Expérience <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link  list-group-item-action" href="#">Projet <span class="sr-only">(current)</span></a>
+                            <a class="nav-link  list-group-item-action" href="Projets.html">Projet <span class="sr-only">(current)</span></a>
                         </li>
                     </ul>
                 </div>
             </nav>
             <div id="Experience">
-                <h1><img src="img/study.png" id="school-img" /> Mes Experiences </h1>
+                <h1><img src="img/work1.png" id="school-img" /> Mes Experiences Professionnelles </h1>
                 <p id="Experience-text">
                     <b>Devu : 2018-2019</b>
                     <br /><br />
                     <i>- Relever d'occupation de salle</i>
                     <br /><br />
-                    <b>Plastibell : 2017</b>
+                    <b>Plastibell : été 2017</b>
                     <br /><br />
                     <i>- Conditionnement en usine</i>
                 </p>
@@ -166,19 +166,19 @@
                     <div>
                         <ul class="list-group list-group-flush ">
                             <li class="list-group-item">
-                                <b>2i Tech Academy</b> <a href="#mapid" onclick="Academy(); click();">Voir carte</a> <br /><u>Apprentissage à venir </u>
+                                <b>Devu</b> <a href="#mapid" onclick="Devu()">Voir carte</a> <br /><u>Missions </u>
                                 <ul>
-                                    <li> Symfony</li>
-                                    <li> MongoDB(SQL)</li>
-                                    <li> Spring</li>
+                                    <li> Faire un point avec l'équipe tous les matins de la semaine.</li>
+                                    <li> Faire le tour du batîment concerner une fois toute les heures</li>
+                                    <li> Relever les présences des cours réservés et noter les cours présent dans une salle non reservé</li>
                                 </ul>
                             </li>
 
                             <li class="list-group-item">
-                                <b>Lycée Charlie Chaplin</b> <a href="#mapid" onclick="Lycee(); click();">Voir carte</a><br /> <u>Notions vues</u>
+                                <b>Plastibell</b> <a href="#mapid" onclick="Plastibell()">Voir carte</a><br /> <u>Missions</u>
                                 <ul>
-                                    <li>Acquisition des bases de l'informatique</li>
-                                    <li>Cours de chinois (3 ans)</li>
+                                    <li>Retirer les bavures des pièces sorties du four</li>
+                                    <li>Receptionner les sacs de pièces sorties de la salle blanche et les ranger</li>
                                 </ul>
                             </li>
                         </ul>
@@ -196,27 +196,22 @@
                             tileSize: 512,
                             zoomOffset: -1
                         }).addTo(mymap);
-                        var markerLycee = L.marker([45.7727019, 4.9754409]).addTo(mymap);
-                        markerLycee.bindPopup("<b>Lycée Charlie Chaplin</b><br> <u>Adresse </u> : 373 Avenue Jean Jaurès, 69150 Décines-Charpieu <br><u> Téléphone</u> : 04 72 05 63 90.");
+                        var markerDevu = L.marker([45.76667, 4.88333]).addTo(mymap);
+                        markerDevu.bindPopup("<b>Devu</b><br> <u>Adresse </u> : Bâtiment Le Quai 43 _28, avenue Gaston Berger 69622 VILLEURBANNE CEDEX <br><u> Téléphone</u> : 04 72 43 19 73.");
                         //markerLycee.openPopup();
-                        var markerUniversite = L.marker([45.7815502, 4.8681782]).addTo(mymap);
-                        markerUniversite.bindPopup("<b>Université Lyon1 Claude Bernard</b><br> <u>Adresse </u> : 43 Boulevard du 11 Novembre 1918, 69100 Villeurbanne <br><u> Téléphone</u> : 04 72 44 80 00.");
-                        var markerAlternance = L.marker([45.7452, 4.842]).addTo(mymap);
-                        markerAlternance.bindPopup("<b>2i Tech Academy</b><br> <u>Adresse </u> : Seven, Immeuble le, 69 Avenue Tony Garnier, 69007 Lyon <br><u> Téléphone</u> :  04 78 02 38 90.");
+                        var markerPlastibell = L.marker([46.2667, 5.5667]).addTo(mymap);
+                        markerPlastibell.bindPopup("<b>Plastibell</b><br> <u>Adresse </u> :ZI la Plaine, 01580 Izernore <br><u> Téléphone</u> : 04 74 49 13 46.");
 
-                        var varAcademy = false;
-                        var varUniversite = false;
-                        var varLycee = false;
+                        var varDevu = false;
+                        var varPlastibell = false;
 
-                        function Academy() {
-                            varAcademy = true; varUniversite = false; varLycee = false; markerAlternance.openPopup()
+                        function Devu() {
+                            varDevu = true; varPlastibell = false; markerDevu.openPopup()
                         }
-                        function Universite() {
-                            varAcademy = false; varUniversite = true; varLycee = false; markerUniversite.openPopup();
+                        function Plastibell() {
+                            varDevu = false; varPlastibell = true; markerPlastibell.openPopup();
                         }
-                        function Lycee() {
-                            varAcademy = false; varUniversite = false; varLycee = true; markerLycee.openPopup();
-                        }
+
 
                         var varPlus = true;
                         function plus() {

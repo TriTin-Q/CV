@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <style>
+        body {
+            background-color: rgb(191,177,173);
+        }
+
+        div {
+            /*background-color: #eb4034;*/
+            /*background-color: rgb(191,177,173);*/
+            /*z-index: -1;*/
+        }
+
+
+
+        #BaseBloc {
+            height: 720px;
+            width: 100%;
+            background-color: white;
+            border-bottom: initial;
+            border-bottom-color: black;
+            border-bottom-width: medium;
+            border z-index: -1;
+            background-color: rgb(191,177,173);
+            /*text-align:center;*/
+        }
+
+        #Projet {
+            margin-top: 30px;
+            height: 650px;
+            width: 90%;
+            margin-left: 5%;
+            /*background-color: rgb(217,217,217);*/
+            /*text-align:center;*/
+            /*background-color: #f0efeb;*/
+            background-color: white;
+        }
+
+            #Projet h1 {
+                color: black;
+                position: relative;
+                left: 2%;
+                top: 2%;
+                /*transform: translate(-3%, -15%);*/
+                opacity: 1;
+                font-family: Calibri;
+            }
+
+        #school-img {
+            position: relative;
+            left: -10px;
+        }
+
+        #work-img {
+            position: absolute;
+            width: 25%;
+            height: 80%;
+            left: 70%;
+            top: 20%;
+        }
+
+        #Projet-text {
+            color: black;
+            font-size: 24px;
+            position: relative;
+            left: 8%;
+            top: 3%;
+            font-family: Calibri;
+        }
+
+        p {
+            color: black;
+            font-family: Calibri;
+            z-index:1;
+        }
+        img{
+            z-index:0;
+        }
+
+        #Plus-1 {
+            /*margin-top: 200px;*/
+            width: 90%;
+            margin-left: 5%;
+            /*text-align: center;*/
+            margin-top: 20px;
+        }
+
+        #ButtonPlus-1 {
+            position: absolute;
+            top: 95%;
+            left: 40%;
+        }
+
+        #Plus-text {
+            background-color: #f0efeb;
+        }
+
+        #navbarSupportedContent {
+            background-color: white;
+        }
+
+        #navbar {
+            background-color: white;
+        }
+
+
+    </style>
+    <div>
+        <div style="z-index : 0;" id="BaseBloc">
+            <nav class="navbar navbar-expand-lg navbar-light " id="navbar">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="nav nav-tabs ">
+                        <li class="nav-item ">
+                            <a class="nav-link list-group-item-action" href="Sommaire.html">Menu <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link  list-group-item-action" href="Projet.html">Formation <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link  list-group-item-action" href="Expérience.html">Expérience <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link  active list-group-item-action" href="Projets.html">Projet <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="Projet">
+                <h1><img src="img/project.png" id="school-img" /> Mes Projets </h1>
+                <p id="Projet-text">
+                    <b>Projet CV(Site Web): Juillet 2020</b>
+                    <br />
+                    <u>But :</u> Concevoir mon CV en Site-Web afin de démontrer mes compétences et me démarquer des autres.
+                    <br />
+                    <u>Langages/FrameWork :</u> HTML,CSS,Bootstrap,JavaScript
+                    <br />
+                    <br />
+                    <b>Projet Gacha: Mai-Juin 2020</b>
+                    <br />
+                    <u>But :</u> Concevoir une application (jeu) et un Site Web permettant de reprender l'ensemble du jeu et du projet
+                    <br />
+                    <u>Langages/FrameWork :</u> Application (C++/SFML); Site Web (HTML,CSS,Bootstrap,JavaScript(AngularJS))
+                    <br /><br />
+                    <b>Projet Site Web Mets-Vins : Début année 2020</b>
+                    <br />
+                    <u>But :</u> Concevoir un Site Web pour un particulier permettant de cartographier tous les domaines de vins et une partie permettant de <br/>s'informer quel association
+                    de vins et de plats on peut faire.
+                    <br />
+                    <u>Langages/FrameWork :</u> HTML, CSS, Bootstrap, Javascript (NodeJS), PHP, Json
+                </p>
+                <img src="img/Rocket.png" id="work-img" />
+                <p>
+                    <a class="btn-group-toggle btn btn-secondary active" id="ButtonPlus-1" data-toggle="collapse" href="#ProjetText" role="button" aria-expanded="false" aria-controls="ProjetText" onclick="plus();">
+                        Refermer
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div id="Plus-1">
+            <div class="collapse show" id="ProjetText">
+                <div class="card card-body " id="Plus-text">
+                    <div>
+                        <ul class="list-group list-group-flush ">
+                            <li class="list-group-item">
+                                <b>Projet CV</b> <a href="#mapid" onclick="Academy(); click();">Voir carte</a> <br /><u>Information </u>
+                                <ul>
+                                    <li> Durée limité : à finir le plus vite possible sinon non</li>
+                                    <li> Abouti : Non</li>
+                                    <li> Date de commencement : 21 Juillet 2020</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Université lyon 1 Claude Bernard</b> <a href="#mapid" onclick="Universite(); click();">Voir carte</a><br /><u>Vue/Appris</u>
+                                <ul>
+                                    <li>Langage : C++,C,Java,Python / HTML, CSS, Bootstrap / JavaScript (NodeJS, AngularJS, Jquery...)</li>
+                                    <li>
+                                        Autre notions :
+                                        <ul>
+                                            <li>Interface grapghique : SFML,SDL,Open GL</li>
+                                            <li>Connaissance plus approfondi en réseau informatique (TCP/IP, Modèle OSI, Routage...)</li>
+                                            <li>Programmation orientée objet/MVC</li>
+                                            <li>Diagramm de gantt/Méthode Agile</li>
+                                            <li>Base de données: phpmyadmin/psql/Json</li>
+                                        </ul>
+
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                            <li class="list-group-item">
+                                <b>Lycée Charlie Chaplin</b> <a href="#mapid" onclick="Lycee(); click();">Voir carte</a><br /> <u>Notions vues</u>
+                                <ul>
+                                    <li>Acquisition des bases de l'informatique</li>
+                                    <li>Cours de chinois (3 ans)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <center><div id="mapid"></div></center>
+                    
+                </div>
+            </div>
+        </div>
+        <script>
+            var varPlus = true;
+            function plus() {
+                if (varPlus == true) {
+                    document.getElementById("ButtonPlus-1").innerHTML = 'En savoir plus'
+                    varPlus = false;
+                } else {
+                    document.getElementById("ButtonPlus-1").innerHTML = 'Refermer'
+                    varPlus = true;
+                }
+            }
+        </script>
+
+
+    </div>
+</body>
+</html>
