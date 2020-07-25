@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <style>
+        body {
+            background-color: rgb(191,177,173);
+        }
+
+        div {
+            /*background-color: #eb4034;*/
+            /*background-color: rgb(191,177,173);*/
+            /*z-index: -1;*/
+        }
+
+
+
+        #BaseBloc {
+            height: 720px;
+            width: 100%;
+            background-color: white;
+            border-bottom: initial;
+            border-bottom-color: black;
+            border-bottom-width: medium;
+            border z-index: -1;
+            background-color: rgb(191,177,173);
+            /*text-align:center;*/
+        }
+
+        #Contact {
+            margin-top: 30px;
+            height: 650px;
+            width: 90%;
+            margin-left: 5%;
+            /*background-color: rgb(217,217,217);*/
+            /*text-align:center;*/
+            /*background-color: #f0efeb;*/
+            background-color: white;
+        }
+
+            #Contact h1 {
+                color: black;
+                position: relative;
+                left: 2%;
+                top: 2%;
+                /*transform: translate(-3%, -15%);*/
+                opacity: 1;
+                font-family: Calibri;
+            }
+
+        #school-img {
+            position: relative;
+            left: -10px;
+        }
+
+        #work-img {
+            position: absolute;
+            width: 25%;
+            height: 35%;
+            left: 70%;
+            top: 70%;
+        }
+
+        #Contact-text {
+            color: black;
+            font-size: 24px;
+            position: relative;
+            left:10%;
+            top: -15%;
+            width:70%;
+            font-family: Calibri;
+            z-index :1;
+        }
+
+        p {
+            color: black;
+            font-family: Calibri;
+        }
+        li {
+            color: black;
+            font-size: 17.1px;
+            font-family: Calibri;
+        }
+
+        #Plus-text {
+            background-color: #f0efeb;
+        }
+
+        #navbarSupportedContent {
+            background-color: white;
+        }
+
+        #navbar {
+            background-color: white;
+        }
+
+        #mapid {
+            height: 400px;
+            width: 600px;
+            background-color: white;
+        }
+        #InfoPlus{
+            border:solid;
+           position:relative;
+           left:60%;
+           top : 10%;
+            width:30%;
+            z-index:2;
+            background-color: rgb(0,0,0,0.1);
+         
+        }
+    </style>
+    <div>
+        <div style="z-index : 0;" id="BaseBloc">
+            <nav class="navbar navbar-expand-lg navbar-light " id="navbar">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="nav nav-tabs ">
+                        <li class="nav-item ">
+                            <a class="nav-link list-group-item-action" href="Sommaire.html">Menu <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link  list-group-item-action" href="Formation.html">Formation <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link  list-group-item-action" href="Expérience.html">Expérience <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link  list-group-item-action" href="Projets.html">Projet <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active list-group-item-action" href="Contact.html">Contact <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="Contact">
+                <h1><img src="img/Information1.png" id="school-img" /> Contact </h1>
+                <div id="InfoPlus"><br />
+                    <center><h3>Info Pratique</h3></center>
+                <!--<br/>-->
+                    <ul>
+                        <li>Permis : Permis B (Non véhiculé)</li>
+                        <li>Âge : 22 ans (02/06/1998)</li>
+                        <li>Nationalité : Française</li>
+                    </ul>
+                </div>
+                <p id="Contact-text">
+                    <b><img src="img/Bonhomme.png"/>Nom Prénom :</b> <i>Quach TriTin</i>
+                    <br /><br />
+                    <b><img src="img/Phone.png" /> Téléphone : </b><i>06.09.31.48.13</i>
+                    <br /><br />
+                    <b><img src="img/Email.png" /> Email : </b><i> quachtritin@outlook.com </i>
+                    <br />
+                    <br />
+                    <b><img src="img/Map.png" />Adresse :</b><i>46 rue sully, Décines 69150</i>
+                </p>
+                <img src="img/Dragon.png" id="work-img" />
+
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
